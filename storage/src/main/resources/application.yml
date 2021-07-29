@@ -1,0 +1,20 @@
+spring:
+  profiles:
+    active: dev
+---
+spring:
+  profiles: dev
+  application:
+    name: STORAGE
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      discovery:
+        namespace: 66334300-8708-4620-8cb1-244929fd4c16
+        username: nacos
+        password: nacos
+    sentinel:
+      transport:
+        dashboard: localhost:8858
+server:
+  port: 9001
